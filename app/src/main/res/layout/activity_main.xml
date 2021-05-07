@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_add_reaction_24"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"></ImageView>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_action_send_now"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/submitButton"></ImageView>
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emoji_edut_text"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/emoji_button"
+        android:layout_toLeftOf="@id/submitButton"
+        app:emojiconSize="28sp"></hani.momanii.supernova_emoji_library.Helper.EmojiconEditText>
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:id="@+id/txtContent"
+        android:text="Emoji Textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="26dp"></hani.momanii.supernova_emoji_library.Helper.EmojiconTextView>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ckb_Default"
+        android:checked="false"
+        android:text="User Default Icon"
+        android:layout_below="@id/txtContent"
+        android:layout_centerInParent="true"></CheckBox>
+</RelativeLayout>
